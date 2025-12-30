@@ -1,8 +1,8 @@
 # 💥 Grenade Thrower Plugin
 ### An SCP: Secret Laboratory Plugin (Exiled)
 
-Turn the standard **FSP-9** into a devastating **Grenade Launcher**.
-This plugin modifies the weapon mechanics to shoot instant-detonation projectiles instead of bullets, complete with **custom sound effects** and a jamming mechanic.
+Turn the standard **COM-18** into a devastating **Grenade Launcher**.
+This plugin modifies the weapon mechanics to shoot instant-detonation projectiles instead of bullets, complete with custom sound effects, recoil, and a jamming mechanic.
 
 ![Downloads](https://img.shields.io/github/downloads/JUSICK/Grenade-Launcher-SCP-SL-plugin-sound-included-/total?style=for-the-badge&color=blueviolet)
 ![Version](https://img.shields.io/badge/EXILED-9.0.0-blue?style=for-the-badge&logo=csharp)
@@ -10,7 +10,7 @@ This plugin modifies the weapon mechanics to shoot instant-detonation projectile
 
 ## ✨ Features
 * **Custom Projectiles:** Shoots actual grenades (Frags, Flashbangs, or SCP-018) instead of bullets.
-* **Custom Audio:** Plays a distinct `.ogg` sound file from the server upon firing.
+* **Custom Audio:** Plays a distinct `.ogg` sound file from your config folder upon firing.
 * **Disposable Mechanic:** The weapon "jams" permanently after a set number of shots (default: 4), preventing reload spam.
 * **Smart Logging:** Logs exactly who picks up the weapon with customizable messages.
 
@@ -20,7 +20,8 @@ This plugin modifies the weapon mechanics to shoot instant-detonation projectile
 2.  **Plugin Folder:** Drop the `.dll` file into your server's plugin folder:
     `%appdata%\EXILED\Plugins`
 3.  **Audio Setup:**
-    * Place your custom sound file (**must be named** `output.ogg`) in your server configs folder.
+    * Place your custom sound file (must be `.ogg`) in your server configs folder.
+    * **Note:** The file name must match the `sound_file_name` setting in your config (Default: `output.ogg`).
     * Ensure the file is **Mono** and **48kHz** (use Audacity to convert if needed).
 4.  **Restart:** Restart the server to generate the config file.
 
@@ -32,7 +33,8 @@ You can edit these settings in your server's `config.yml` file located in `%appd
 | :--- | :--- | :--- | :--- |
 | `is_enabled` | `bool` | `true` | Toggles the plugin on or off. |
 | `projectile_type` | `string` | `FragGrenade` | The projectile to launch. Options: `FragGrenade`, `Flashbang`, `Scp018`. |
-| `configs` | `string` | *(Path)* | The folder path where your `.ogg` sound file is located. |
+| `configs` | `string` | *(Path)* | The directory path where your audio file is located. |
+| `sound_file_name` | `string` | `output.ogg` | The exact name of the sound file to play (e.g., `boom.ogg`). |
 | `sound_volume` | `float` | `1.7` | Volume of the shot sound. Recommended: `1.5` - `2.0`. |
 | `available_shots` | `int` | `4` | How many shots the weapon has before it permanently jams. |
 | `jammed_message` | `string` | *(See below)* | The hint shown when a player tries to shoot/reload an empty gun. |
