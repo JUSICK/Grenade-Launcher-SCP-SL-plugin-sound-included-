@@ -10,8 +10,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using PlayerEvent = Exiled.Events.Handlers.Player;
 
-//using AUdioPlayerAPI;
-
 namespace BigGun.BigWeapon;
 
 [CustomItem(ItemType.GunFSP9)]
