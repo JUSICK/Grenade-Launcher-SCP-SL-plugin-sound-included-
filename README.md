@@ -49,14 +49,3 @@ big_gun:
   jammed_message: 'The mechanism jammed!'
   log_message: 'Grenade Thrower was added to the ({player.Id}) {player.Nickname}`s inventory.'
 
-
-           🐛 Troubleshooting
-No Sound?
-
-Ensure the path in configs points to the folder containing your .ogg file.
-
-Verify the file is strictly Mono channel and 48000Hz. Stereo files will often fail to play in SCP:SL.
-
-Weapon Reloading?
-
-This plugin intentionally blocks reloading to simulate a "Disposable Launcher." If you want players to reload, increase available_shots.
