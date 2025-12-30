@@ -56,3 +56,5 @@ If you hear the default gun sound instead of your custom explosion:
 ### 🚫 Weapon Won't Reload?
 * **This is intended behavior.** The weapon is designed to be "Disposable" (like the MicroHID) so players cannot spam grenades forever.
 * **How to change it:** If you want players to reload, open your `config.yml` and increase the `available_shots` value (e.g., set it to `100`).
+
+"ci give 105" - by default to give the item
