@@ -20,7 +20,7 @@ This plugin modifies the weapon mechanics to shoot instant-detonation projectile
 2.  **Plugin Folder:** Drop the `.dll` file into your server's plugin folder:
     `%appdata%\EXILED\Plugins`
 3.  **Audio Setup:**
-    * Place your custom sound file (must be `.ogg`) in your server configs folder.
+    * Place your custom sound file (**must be named** `output.ogg`) in your server configs folder.
     * Ensure the file is **Mono** and **48kHz** (use Audacity to convert if needed).
 4.  **Restart:** Restart the server to generate the config file.
 
@@ -43,7 +43,7 @@ You can edit these settings in your server's `config.yml` file located in `%appd
 
 ### 🔊 No Sound?
 If you hear the default gun sound instead of your custom explosion:
-1.  **Check the Path:** Ensure the `configs` setting in your `config.yml` points **exactly** to the folder containing your `.ogg` file.
+1.  **Check the Path:** Ensure the `configs` setting in your `config.yml` points **exactly** to the folder containing your `.ogg` file **named** `output.ogg`.
 2.  **Check the Audio Format:** SCP:SL is very strict about audio. Your file **must** be:
     * Format: **.ogg**
     * Channels: **Mono** (Stereo files often fail silently)
