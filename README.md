@@ -51,7 +51,6 @@ If you hear the default gun sound instead of your custom explosion:
     * Format: **.ogg**
     * Channels: **Mono** (Stereo files often fail silently)
     * Sample Rate: **48,000 Hz** (48kHz)
-    * *Tip: You can fix this easily using free software like Audacity.*
 
 ### 🚫 Weapon Won't Reload?
 * **This is intended behavior.** The weapon is designed to be "Disposable" (like the MicroHID) so players cannot spam grenades forever.
