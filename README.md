@@ -39,13 +39,15 @@ You can edit these settings in your server's `config.yml` file located in `%appd
 | `jammed_message_duration` | `int` | `1` | How long (in seconds) the jam hint stays on screen. |
 | `log_message` | `string` | *(See below)* | Message logged to server console on pickup. Supports `{player.Id}` and `{player.Nickname}`. |
 
-### Example Config
-```yaml
-big_gun:
-  is_enabled: true
-  projectile_type: 'FragGrenade'
-  sound_volume: 1.7
-  available_shots: 4
-  jammed_message: 'The mechanism jammed!'
-  log_message: 'Grenade Thrower was added to the ({player.Id}) {player.Nickname}`s inventory.'
+### 🐛 Troubleshooting
+
+No Sound?
+
+Ensure the path in configs points to the folder containing your .ogg file.
+
+Verify the file is strictly Mono channel and 48000Hz. Stereo files will often fail to play in SCP:SL.
+
+Weapon Reloading?
+
+This plugin intentionally blocks reloading to simulate a "Disposable Launcher." If you want players to reload, increase available_shots.
 
