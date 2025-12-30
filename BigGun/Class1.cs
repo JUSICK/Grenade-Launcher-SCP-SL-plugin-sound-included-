@@ -17,7 +17,7 @@ public class BigGunPlugin : Plugin<Config>
     private void OnRegistered()
     {
         Instance = this;
-        soundPath = Path.Combine(Paths.Configs, "output.ogg");
+        soundPath = Path.Combine(Paths.Configs, BigGunPlugin.Instance.Config.soundFileName);
         CustomItem.RegisterItems();
         server.WaitingForPlayers += NotifyLog;
         server.WaitingForPlayers += OnPluginLoad;

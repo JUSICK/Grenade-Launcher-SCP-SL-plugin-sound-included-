@@ -27,4 +27,6 @@ public class Config : IConfig
 
     [Description("What Log.Info writes to the log when the player gets the grenade thrower by picking it up/acquiring")]
     public string LogMessage { get; set; } = "Grenade Thrower was added to the ({player.Id}) {player.Nickname}`s inventory.";
+
+    public string soundFileName { get; set; } = "output.ogg";
 }
