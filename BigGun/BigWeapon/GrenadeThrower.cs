@@ -17,10 +17,10 @@ namespace BigGun.BigWeapon;
 [CustomItem(ItemType.GunFSP9)]
 public class GrenadeThrower : CustomItem 
 { 
-        public override uint Id { get; set; } = 105;
-        public override string Name { get; set; } = "Grenade Thrower";
-        public override string Description { get; set; } = "KABOOM!";
-        public override float Weight { get; set; } = 10.0f;
+        public override uint Id { get; set; } = BigGunPlugin.Instance.Config.CustimItemId;
+        public override string Name { get; set; } = BigGunPlugin.Instance.Config.CustomItemName;
+        public override string Description { get; set; } = BigGunPlugin.Instance.Config.Description;
+        public override float Weight { get; set; } = BigGunPlugin.Instance.Config.Weight;
     public override ItemType Type { get; set; } = ItemType.GunFSP9;
     public override SpawnProperties SpawnProperties { get; set; } = new SpawnProperties() {Limit = 1}; 
     protected override void SubscribeEvents()

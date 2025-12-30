@@ -7,11 +7,24 @@ public class Config : IConfig
     public bool IsEnabled { get; set; } = true;
     public bool Debug { get; set; } = false;
 
+    [Description("What is the ID of the Custom item?")]
+    public uint CustimItemId { get; set; } = 105;
+
+    [Description("What is the Name of the Custom item? Showed to the player? : exiled_custom_items config")]
+    public string CustomItemName { get; set; } = "Grenade Thrower";
+
+    [Description("What is the Description of the Custom item? Showed to the player? : exiled_custom_items config")]
+    public string Description { get; set; } = "KABOOM!";
+    public float Weight { get; set; } = 10f;
+
     [Description("What ProjectileType does the Grenade thrower use? EX: \"FragGrenade\", \"Flashbang\" etc.")]
     public ProjectileType ProjectileType { get; set; } = ProjectileType.FragGrenade;
 
     [Description("The directory path to the .ogg file. (Must be .ogg & 48 kHz & mono)")]
     public static string Configs { get; set; } = @"C:\Users\JUICE\AppData\Roaming\EXILED\Configs";
+
+    [Description("How the is sound file called in the directory?")]
+    public string soundFileName { get; set; } = "output.ogg";
 
     [Description("Recommended volume is 1.5 - 2.0")]
     public float soundVolume { get; set; } = 1.7f;
@@ -27,6 +40,4 @@ public class Config : IConfig
 
     [Description("What Log.Info writes to the log when the player gets the grenade thrower by picking it up/acquiring")]
     public string LogMessage { get; set; } = "Grenade Thrower was added to the ({player.Id}) {player.Nickname}`s inventory.";
-
-    public string soundFileName { get; set; } = "output.ogg";
 }
