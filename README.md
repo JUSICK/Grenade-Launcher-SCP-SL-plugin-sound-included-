@@ -4,7 +4,7 @@
 Turn the standard **COM-18** into a devastating **Grenade Launcher**.
 This plugin modifies the weapon mechanics to shoot instant-detonation projectiles instead of bullets, complete with custom sound effects, recoil, and a jamming mechanic.
 
-![Downloads](https://img.shields.io/github/downloads/JUSICK/Grenade-Launcher-SCP-SL-plugin-sound-included-/total?style=for-the-badge&color=blueviolet)
+[![Download Release](https://img.shields.io/badge/Download-Release-2ea44f?style=for-the-badge&logo=github)](https://github.com/JUSICK/Grenade-Launcher-SCP-SL-plugin-sound-included-/releases/tag/scp)
 ![Version](https://img.shields.io/badge/EXILED-9.0.0-blue?style=for-the-badge&logo=csharp)
 ![License](https://img.shields.io/github/license/JUSICK/Grenade-Launcher-SCP-SL-plugin-sound-included-?style=for-the-badge)
 
