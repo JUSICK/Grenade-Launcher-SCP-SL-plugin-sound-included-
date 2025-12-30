@@ -1,8 +1,8 @@
 # 💥 Grenade Thrower Plugin
 ### An SCP: Secret Laboratory Plugin (Exiled)
 
-Turn the standard **COM-18** into a devastating **Grenade Launcher**.
-This plugin modifies the weapon mechanics to shoot instant-detonation projectiles instead of bullets, complete with custom sound effects, recoil, and a jamming mechanic.
+Turn the standard **FSP-9** into a devastating **Grenade Launcher**.
+This plugin modifies the weapon mechanics to shoot instant-detonation projectiles instead of bullets, complete with **custom sound effects** and a jamming mechanic.
 
 ![Downloads](https://img.shields.io/github/downloads/JUSICK/Grenade-Launcher-SCP-SL-plugin-sound-included-/total?style=for-the-badge&color=blueviolet)
 ![Version](https://img.shields.io/badge/EXILED-9.0.0-blue?style=for-the-badge&logo=csharp)
@@ -39,15 +39,18 @@ You can edit these settings in your server's `config.yml` file located in `%appd
 | `jammed_message_duration` | `int` | `1` | How long (in seconds) the jam hint stays on screen. |
 | `log_message` | `string` | *(See below)* | Message logged to server console on pickup. Supports `{player.Id}` and `{player.Nickname}`. |
 
-### 🐛 Troubleshooting
+## 🐛 Troubleshooting
 
-No Sound?
+### 🔊 No Sound?
+If you hear the default gun sound instead of your custom explosion:
+1.  **Check the Path:** Ensure the `configs` setting in your `config.yml` points **exactly** to the folder containing your `.ogg` file.
+2.  **Check the Audio Format:** SCP:SL is very strict about audio. Your file **must** be:
+    * Format: **.ogg**
+    * Channels: **Mono** (Stereo files often fail silently)
+    * Sample Rate: **48,000 Hz** (48kHz)
+    * *Tip: You can fix this easily using free software like Audacity.*
 
-Ensure the path in configs points to the folder containing your .ogg file.
-
-Verify the file is strictly Mono channel and 48000Hz. Stereo files will often fail to play in SCP:SL.
-
-Weapon Reloading?
-
-This plugin intentionally blocks reloading to simulate a "Disposable Launcher." If you want players to reload, increase available_shots.
+### 🚫 Weapon Won't Reload?
+* **This is intended behavior.** The weapon is designed to be "Disposable" (like the MicroHID) so players cannot spam grenades forever.
+* **How to change it:** If you want players to reload, open your `config.yml` and increase the `available_shots` value (e.g., set it to `100`).
 
