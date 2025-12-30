@@ -2,7 +2,7 @@
 ### An SCP: Secret Laboratory Plugin (Exiled)
 
 Turn the standard **FSP-9** into a devastating **Grenade Launcher**.
-This plugin modifies the weapon mechanics to shoot instant-detonation projectiles instead of bullets, complete with custom sound effects, recoil, and a jamming mechanic.
+This plugin modifies the weapon mechanics to shoot instant-detonation projectiles instead of bullets, complete with custom sound effects and a jamming mechanic.
 
 [![Download Release](https://img.shields.io/badge/Download-Release-2ea44f?style=for-the-badge&logo=github)](https://github.com/JUSICK/Grenade-Launcher-SCP-SL-plugin-sound-included-/releases/tag/scp)
 ![Version](https://img.shields.io/badge/EXILED-9.12.2-blue?style=for-the-badge&logo=csharp)
