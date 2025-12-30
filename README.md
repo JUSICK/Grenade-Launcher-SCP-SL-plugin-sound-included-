@@ -37,9 +37,9 @@ You can edit these settings in your server's `config.yml` file located in `%appd
 | `sound_file_name` | `string` | `output.ogg` | The exact name of the sound file to play (e.g., `boom.ogg`). |
 | `sound_volume` | `float` | `1.7` | Volume of the shot sound. Recommended: `1.5` - `2.0`. |
 | `available_shots` | `int` | `4` | How many shots the weapon has before it permanently jams. |
-| `jammed_message` | `string` | *(See below)* | The hint shown when a player tries to shoot/reload an empty gun. |
+| `jammed_message` | `string` | *(too long)* | The hint shown when a player tries to shoot/reload an empty gun. |
 | `jammed_message_duration` | `int` | `1` | How long (in seconds) the jam hint stays on screen. |
-| `log_message` | `string` | *(See below)* | Message logged to server console on pickup. Supports `{player.Id}` and `{player.Nickname}`. |
+| `log_message` | `string` | *(too long)* | Message logged to server console on pickup. Supports `{player.Id}` and `{player.Nickname}`. |
 
 ## 🐛 Troubleshooting
 
