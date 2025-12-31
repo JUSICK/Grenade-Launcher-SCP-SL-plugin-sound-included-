@@ -6,11 +6,12 @@ using Exiled.CustomItems.API.Features;
 using Exiled.Events.EventArgs.Player;
 using InventorySystem.Items.Firearms.Attachments;
 using MEC;
+using System;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 using PlayerEvent = Exiled.Events.Handlers.Player;
-
-//using AUdioPlayerAPI;
+using server = Exiled.Events.Handlers.Server;
 
 namespace BigGun.BigWeapon;
 
@@ -25,12 +26,14 @@ public class GrenadeThrower : CustomItem
     public override SpawnProperties SpawnProperties { get; set; } = new SpawnProperties() {Limit = 1}; 
     protected override void SubscribeEvents()
     {
+        server.WaitingForPlayers += ResetGunReloadCount;
         PlayerEvent.Shooting += OnShooting;
         PlayerEvent.ReloadingWeapon += OnReloading;
         base.SubscribeEvents();
     }
     protected override void UnsubscribeEvents()
     {
+        server.WaitingForPlayers -= ResetGunReloadCount;
         PlayerEvent.Shooting -= OnShooting;
         PlayerEvent.ReloadingWeapon -= OnReloading;
         base.UnsubscribeEvents();
@@ -82,9 +85,25 @@ public class GrenadeThrower : CustomItem
             // Set local positino to zero to make sure that speaker is in player.
             speaker.transform.localPosition = Vector3.zero;
         });
-        
+
         audioPlayer.AddClip("playersound", BigGunPlugin.Instance.Config.soundVolume);
     }
+
+    //public void PlayOnObject(GameObject targetObject, string audioName)
+    //{
+    //    string botname = $"Audio_{Guid.NewGuid().ToString().Substring(0, 5)}";
+
+    //    AudioPlayer audioPlayer = AudioPlayer.CreateOrGet(botname, onIntialCreation: (p) =>
+    //    {
+    //        p.transform.parent = targetObject.transform;
+    //        p.transform.localPosition = Vector3.zero;
+    //        Speaker speaker = p.AddSpeaker("Main", isSpatial: true, minDistance: 5f, maxDistance: 15f);
+    //        speaker.transform.parent = targetObject.transform;
+    //        speaker.transform.localPosition = Vector3.zero;
+    //    });
+
+    //    audioPlayer.AddClip(audioName, BigGunPlugin.Instance.Config.soundVolume);
+    //}
 
     private Dictionary<ushort, int> _gunReloadCounts = new Dictionary<ushort, int>();
     private void OnReloading(ReloadingWeaponEventArgs ev)
@@ -104,5 +123,6 @@ public class GrenadeThrower : CustomItem
             }
         else _gunReloadCounts[serial]++;
     }
+    private void ResetGunReloadCount() => _gunReloadCounts.Clear();
 }
 
