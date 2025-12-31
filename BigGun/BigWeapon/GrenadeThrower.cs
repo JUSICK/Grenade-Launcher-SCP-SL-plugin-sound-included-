@@ -87,22 +87,6 @@ public class GrenadeThrower : CustomItem
         audioPlayer.AddClip("playersound", BigGunPlugin.Instance.Config.soundVolume);
     }
 
-    //public void PlayOnObject(GameObject targetObject, string audioName)
-    //{
-    //    string botname = $"Audio_{Guid.NewGuid().ToString().Substring(0, 5)}";
-
-    //    AudioPlayer audioPlayer = AudioPlayer.CreateOrGet(botname, onIntialCreation: (p) =>
-    //    {
-    //        p.transform.parent = targetObject.transform;
-    //        p.transform.localPosition = Vector3.zero;
-    //        Speaker speaker = p.AddSpeaker("Main", isSpatial: true, minDistance: 5f, maxDistance: 15f);
-    //        speaker.transform.parent = targetObject.transform;
-    //        speaker.transform.localPosition = Vector3.zero;
-    //    });
-
-    //    audioPlayer.AddClip(audioName, BigGunPlugin.Instance.Config.soundVolume);
-    //}
-
     private Dictionary<ushort, int> _gunReloadCounts = new Dictionary<ushort, int>();
     private void OnReloading(ReloadingWeaponEventArgs ev)
     {
