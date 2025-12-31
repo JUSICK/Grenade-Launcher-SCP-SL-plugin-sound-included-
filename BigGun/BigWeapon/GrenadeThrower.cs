@@ -11,7 +11,10 @@ using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using UnityEngine;
 using PlayerEvent = Exiled.Events.Handlers.Player;
+<<<<<<< HEAD
 using server = Exiled.Events.Handlers.Server;
+=======
+>>>>>>> b644a34048a7fd96a8a5b620fb3f948e352870e7
 
 namespace BigGun.BigWeapon;
 

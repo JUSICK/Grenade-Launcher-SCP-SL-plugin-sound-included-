@@ -47,11 +47,10 @@ You can edit these settings in your server's `config.yml` file located in `%appd
 If you hear the default gun sound instead of your custom explosion:
 1.  **Check the File Name:** Ensure the `sound_file_name` setting in your config matches your actual file exactly (including `.ogg`).
 2.  **Check the Path:** Ensure the `configs` setting points **exactly** to the folder containing that file.
-3.  **Check the Audio Format:** SCP:SL is very strict about audio. Your file **must** be:
+3.  **Check the Audio Format:** AudioPlayerApi is very strict about audio. Your file **must** be:
     * Format: **.ogg**
     * Channels: **Mono** (Stereo files often fail silently)
     * Sample Rate: **48,000 Hz** (48kHz)
-    * *Tip: You can fix this easily using free software like Audacity.*
 
 ### 🚫 Weapon Won't Reload?
 * **This is intended behavior.** The weapon is designed to be "Disposable" (like the MicroHID) so players cannot spam grenades forever.
