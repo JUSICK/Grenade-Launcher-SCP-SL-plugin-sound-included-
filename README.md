@@ -1,3 +1,6 @@
+[![Watch the video](https://img.youtube.com/vi/p0unfMFHtQo/maxresdefault.jpg)](https://youtu.be/p0unfMFHtQo)
+
+
 # 💥 Grenade Thrower Plugin
 ### An SCP: Secret Laboratory Plugin (Exiled)
 
